@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ASP Application</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+      .mode-icon {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+        .circle {
+            width: 20px; /* Diameter of the circle */
+            height: 20px; /* Diameter of the circle */
+            border-radius: 50%; /* Makes the div a circle */
+            border: 0.5px solid black; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+        }
+        footer {
+            padding: 10px;
+        }
+        
+        ul.footer-list {
+            list-style: none; /* Removes bullet points */
+            padding: 0;
+            margin: 0;
+            display: flex; /* Aligns items horizontally */
+            gap: 15px; /* Spacing between items */
+        }
+        
+        ul.footer-list li {
+            margin: 0; /* Removes default margin */
+        }
+        .footer-button {
+            border: none; /* Removes border */
+            background: none; /* Removes background color */
+            padding: 0; /* Removes padding */
+            font: inherit; /* Inherits font from parent */
+            cursor: pointer; /* Makes button clickable */
+            
+        }
+    </style>
+  </head>
+  <body>
+    <!-- Nav Bar -->
+    <div class="navigation d-flex justify-content-between align-items-center p-2">
+        <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="#">Your Name</a>
+            </li>
+        </ul>
+        <ul class="nav ">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Newsletter</a>
+            </li>
+          <li id="mode" class="nav-item">
+            <a class="nav-link" aria-disabled="true">
+                <img src="images/moon.png" alt="Dark Mode" id="darkIcon" class="mode-icon">
+                <img src="images/sun.png" alt="Light Mode" id="lightIcon" class="mode-icon" style="display:none;">
+            </a>
+        </li>
+          </ul>
+    </div>
+
+    <!-- main heading -->
+    <h1 style="font-size: 8.5rem; text-align: center">THE BLOG</h1>
+
+    <!-- Recent blog post div -->
+     <h2 class="m-3">Recent blog posts</h2>
+
+     <div class="recent-content row d-flex align-items-stretch mx-auto">
+        <div class="col-md-6 d-flex flex-column mb-3">
+            <div class="card h-100">
+                <img src="Images2/Image.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Oilvia Rhye * 1 Jan 2023</h5>
+                  <h3>UX review presentation</h3>
+                  <p class="card-text">i low do you create compiling presentations that wow colliageus and impress your manager?</p>
+                  <button style="border: none; outline: none; color: purple">Design</button>
+                  <button style="border: none; outline: none; color: darkblue;">Research</button>
+                  <button style="border: none; outline: none; color: hotpink;">Presentation</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12 d-flex flex-column mb-3">
+          <div class="card mb-3 h-100">
+              <div class="row g-0 h-100">
+                  <div class="col-md-4 col-sm-12">
+                      <img src="Images2/Image-1.png" class="img-fluid rounded-start" alt="..." style="height: 100%; width: 100%; object-fit: cover;">
+                  </div>
+                  <div class="col-md-8 col-sm-12 d-flex align-items-center">
+                      <div class="card-body">
+                          <h5 class="card-title">Phoenix Baker * 1 Jan 2023</h5>
+                          <h3>Migrating to Linear 101</h3>
+                          <p class="card-text">Linear helps streamline software projects, sprints, tasks, and bug tracking. Here's how to get...</p>
+                          <button style="border: none; outline: none; color:green;">Design</button>
+                          <button style="border: none; outline: none; color: hotpink;">Research</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      
+          <div class="card mb-3 h-100">
+              <div class="row g-0 h-100">
+                  <div class="col-md-4 col-sm-12">
+                      <img src="Images2/Image-2.png" class="img-fluid rounded-start" alt="..." style="height: 100%; width: 100%; object-fit: cover;">
+                  </div>
+                  <div class="col-md-8 col-sm-12 d-flex align-items-center">
+                      <div class="card-body">
+                          <h5 class="card-title">Lana Stoiner * 1 Jan 2023</h5>
+                          <h3>Building your API Stack</h3>
+                          <p class="card-text">The rise of REStFul APIs has been met by a rise in tools for creating, testing and managing....</p>
+                          <button style="border: none; outline: none; color:green;">Design</button>
+                          <button style="border: none; outline: none; color: hotpink;">Research</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+    </div>
+    <div style="display: flex; align-items: start; width: 100%; gap: 20px; margin: 18px">
+        <div style="flex: 1;">
+            <img src="Images2/Image-3.png" alt="" style="width: 100%; object-fit: cover;">
+        </div>
+        <div style="flex: 1;">
+            <h5>Olivia Rhye * 1 Jan 2023</h5>
+            <h3>Grid system for better Design User Interface</h3>
+            <p>A grid system is a design tool used to arrange content on a webpage. It is a series of vertical and horizontal lines that create a matrix of intersecting points, which can be used to align and organize page elements. Grid systems are used to create a consistent look and feel across a website, and can help to make the layout more visually appealing and easier to navigate.</p>
+            <button style="border: none; outline: none; color:purple">Design</button>
+            <button style="border: none; outline: none; color: hotpink">Interface</button>
+        </div>
+    </div>
+    
+
+    <!-- All Blog Posts -->
+    <h2 class="m-4">All blog posts</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4 mx-3">
+        <div class="col">
+          <div class="card h-100">
+            <img src="Images2/Image-4.svg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Alcc Whitton * 1 Jan 2023</h5>
+              <h3>Bill Walsh Leadership Lessons</h3>
+              <p class="card-text">Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?</p>
+              <button style="border: none; outline: none; color: purple">Leadership</button>
+              <button style="border: none; outline: none; color: darkblue;">Managenment</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="Images2/Image-5.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Demi Wllkinson * 1 Jan 2023</h5>
+              <h3>PM mental models</h3>
+              <p class="card-text">Mental models are simple expressions of complex processes or relationships.</p>
+              <button style="border: none; outline: none; color: green">Product</button>
+              <button style="border: none; outline: none; color:darkblue">Research</button>
+              <button style="border: none; outline: none; color:orange">Frameworks</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="Images2/Image-6.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Candicc Wu * 1 Jan 2023</h5>
+              <h3>What is Wireframing?</h3>
+              <p class="card-text">Introduction to Wireframing and its Principles. Learn from the best in the industry.</p>
+              <button style="border: none; outline: none; color: darkblue">Design</button>
+              <button style="border: none; outline: none; color:purple">Research</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="Images2/Image-7.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Natail craig *  Jan 2023</h5>
+              <h3>How collaboration makes us better designers</h3>
+              <p class="card-text">Collaboration can make our teams stronger, and our individual design better.</p>
+              <button style="border: none; outline: none; color: purple">Design</button>
+              <button style="border: none; outline: none; color: darkblue">Research</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+              <img src="Images2/Image-8.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Drew Cano * 1 Jan 2023</h5>
+                <h3>Our top 10 Javascript frameworks to use</h3>
+                <p class="card-text">JavaScript frameworks make development easy with extensive features and functionalities.</p>
+                <button style="border: none; outline: none; color: green">Software Development</button>
+                <button style="border: none; outline: none; color:hotpink">tools</button>
+                <button style="border: none; outline: none; color:hotpink">Saas</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="Images2/Image-9.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Oriando Diggs * 1 Jan 2023</h5>
+                <h3>Podcast: Creating a better CX Community</h3>
+                <p class="card-text">Starting a community doesn't need to be complicated, but how do yu get started?</p>
+                <button style="border: none; outline: none; color:purple">Podcasts</button>
+                <button style="border: none; outline: none; color: darkblue">Customer Success</button>
+              </div>
+            </div>
+          </div>
+      </div>
+
+  
+    <!-- previous nd next -->
+    <nav aria-label="Page navigation example" class="mt-3">
+        <ul class="pagination justify-content-between">
+            <!-- Previous button -->
+            <li class="page-item d-flex align-items-center">
+                <img src="images/arrow-left.png" alt="Previous" class="me-2">
+                <a class="page-link" href="#">Previous</a>
+            </li>
+    
+            <!-- Page numbers in the center -->
+            <li class="page-item d-none d-md-flex">
+                <ul class="pagination mb-0">
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">.</a></li>
+                    <li class="page-item"><a class="page-link" href="#">.</a></li>
+                    <li class="page-item"><a class="page-link" href="#">.</a></li>
+                    <li class="page-item"><a class="page-link" href="#">8</a></li>
+                    <li class="page-item"><a class="page-link" href="#">9</a></li>
+                    <li class="page-item"><a class="page-link" href="#">10</a></li>
+                </ul>
+            </li>
+    
+            <!-- Next button -->
+            <li class="page-item d-flex align-items-center">
+                <a class="page-link" href="#">Next</a>
+                <img src="images/arrow-right.png" alt="Next" class="ms-2">
+            </li>
+        </ul>
+    </nav>
+    
+
+    <!-- footer -->
+    <footer class="mt-3">
+        <ul class="footer-list mt-10">
+            <li class="circle">C</li>
+            <li><button class="footer-button">Twitter</button></li>
+            <li><button class="footer-button">Linkedin</button></li>
+            <li><button class="footer-button">Email</button></li>
+            <li><button class="footer-button">RSS feed</button></li>
+            <li><button class="footer-button">Add to Feedly</button></li>
+        </ul>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+          const darkIcon = document.querySelector("#darkIcon");
+          const lightIcon = document.querySelector("#lightIcon");
+      
+          let curmode = "light";
+      
+          darkIcon.addEventListener("click", () => {
+              if (curmode === "light") {
+                  curmode = "dark";
+                  document.querySelector("body").style.backgroundColor = "black";
+                  darkIcon.style.display = "none";  // Hide dark mode icon
+                  lightIcon.style.display = "inline";  // Show light mode icon
+              }
+          });
+      
+          lightIcon.addEventListener("click", () => {
+              if (curmode === "dark") {
+                  curmode = "light";
+                  document.querySelector("body").style.backgroundColor = "white";
+                  lightIcon.style.display = "none";  // Hide light mode icon
+                  darkIcon.style.display = "inline";  // Show dark mode icon
+              }
+          });
+      });
+      
+  </script>
+  </body>
+</html>
